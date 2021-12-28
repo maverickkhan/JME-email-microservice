@@ -1,5 +1,5 @@
 export class bellAlertTemplate {
-    static send(title,message,link) {
+    static send(companyName,jobTitle,urlLink) {
       return `
       <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html
@@ -498,7 +498,6 @@ export class bellAlertTemplate {
                                           line-height: 140%;
                                           text-align: left;
                                           word-wrap: break-word;
-                                          padding-bottom: 5   0px;
                                         "
                                       >
                                         <p
@@ -543,34 +542,11 @@ export class bellAlertTemplate {
                                                 line-height: 30.8px;
                                                 color: #000000;
                                               "
-                                              ><strong></strong>
-                                              </span
+                                              ><strong>${companyName}</strong> posted a new job ${jobTitle}, Have a look at this</span
                                             ></span
                                           >
                                         </p>
-                                        <p
-                                          style="
-                                            font-size: 14px;
-                                            line-height: 140%;
-                                            text-align: center;
-                                          "
-                                        >
-                                          <span
-                                            style="
-                                              font-family: Cabin, sans-serif;
-                                              font-size: 12px;
-                                              line-height: 19.6px;
-                                            "
-                                            ><span
-                                              style="
-                                                font-size: 22px;
-                                                line-height: 30.8px;
-                                                color: #000000;
-                                              "
-                                              ></span
-                                            ></span
-                                          >
-                                        </p>
+                                       
                                       </div>
                                     </td>
                                   </tr>
@@ -589,6 +565,7 @@ export class bellAlertTemplate {
                   </div>
       
                   <div style="">
+                    
                     <div class="u-row-container" style="padding: 0px">
                       <div
                         class="u-row"
@@ -623,13 +600,13 @@ export class bellAlertTemplate {
                             <div style="width: 100% !important">
                               <!--[if (!mso)&(!IE)]><!--><div
                                 style="
-                                  padding: 60px 0;
+                                  padding: 0px;
                                   border-top: 0px solid transparent;
                                   border-left: 0px solid transparent;
                                   border-right: 0px solid transparent;
                                   border-bottom: 0px solid transparent;
                                 "
-                              ><!--<![endif]-->
+                              >
                                 <table
                                   style="font-family: 'Open Sans', sans-serif"
                                   role="presentation"
@@ -644,131 +621,64 @@ export class bellAlertTemplate {
                                         style="
                                           overflow-wrap: break-word;
                                           word-break: break-word;
-                                          padding: 10px;
+                                          padding: 10px 10px 0px;
                                           font-family: 'Open Sans', sans-serif;
                                         "
                                         align="left"
                                       >
-                                        <table
-                                          width="100%"
-                                          cellpadding="0"
-                                          cellspacing="0"
-                                          border="0"
-                                        >
-                                          <tr>
-                                            <td
-                                              class="v-text-align"
+                                        <div class="v-text-align" align="center">
+                                          <a
+                                            href="${urlLink}"
+                                            target="_blank"
+                                            style="
+                                              box-sizing: border-box;
+                                              display: inline-block;
+                                              font-family: 'Open Sans', sans-serif;
+                                              text-decoration: none;
+                                              -webkit-text-size-adjust: none;
+                                              text-align: center;
+                                              color: #ffffff;
+                                              background: linear-gradient(
+                                                to right,
+                                                #28b0d8,
+                                                #3ee198
+                                              );
+                                              border-radius: 6px;
+                                              -webkit-border-radius: 6px;
+                                              -moz-border-radius: 6px;
+                                              width: auto;
+                                              max-width: 100%;
+                                              overflow-wrap: break-word;
+                                              word-break: break-word;
+                                              word-wrap: break-word;
+                                              mso-border-alt: none;
+                                            "
+                                          >
+                                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;font-family:'Open Sans',sans-serif;"><tr><td class="v-text-align" style="font-family:'Open Sans',sans-serif;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:46px; v-text-anchor:middle; width:204px;" arcsize="41.5%" stroke="f" fillcolor="#1c4079"><w:anchorlock/><center style="color:#FFFFFF;font-family:'Open Sans',sans-serif;"><![endif]-->
+                                            <span
                                               style="
-                                                padding-right: 0px;
-                                                padding-left: 0px;
+                                                display: block;
+                                                padding: 7px 40px;
                                               "
-                                              align="center"
+                                              ><span
+                                                style="
+                                                  font-size: 14px;
+                                                  line-height: 21.6px;
+                                                  font-family: 'Open Sans', sans-serif;
+                                                "
+                                                ><span style="font-size: 14px"
+                                                  >View</span
+                                                ></span
+                                              ></span
                                             >
-      
-                                              <div
-                                                class="v-text-align"
-                                                style="
-                                                  line-height: 140%;
-                                                  text-align: left;
-                                                  word-wrap: break-word;
-                                                "
-                                              >
-                                                <p
-                                                  style="
-                                                    font-size: 14px;
-                                                    line-height: 140%;
-                                                    text-align: center;
-                                                  "
-                                                >
-                                                  
-                                                </p>
-                                                <p
-                                                  style="
-                                                    font-size: 14px;
-                                                    line-height: 140%;
-                                                    text-align: center;
-                                                  "
-                                                >
-                                                  <span
-                                                    style="
-                                                      font-family: Cabin, sans-serif;
-                                                      font-size: 12px;
-                                                      line-height: 19.6px;
-                                                    "
-                                                    ><span
-                                                      style="
-                                                        font-size: 22px;
-                                                        line-height: 30.8px;
-                                                        color: #000000;
-                                                      "
-                                                    >
-                                                    ${title}</span
-                                                    ></span
-                                                  >
-                                                  <br>
-                                                  <span
-                                                      style="
-                                                        font-size: 15px;
-                                                        line-height: 30.8px;
-                                                        color: #000000;
-                                                      "
-                                                    >
-                                                      <!-- kamal -->
-                                                      ${message}</span
-                                                    ></span
-                                                  >
-                                                </p>
-                                              </div>
-                                              <br><br>
-                                              <div
-                                                class="v-text-align"
-                                                style="
-                                                  line-height: 140%;
-                                                  text-align: left;
-                                                  word-wrap: break-word;
-                                                "
-                                              >
-                                                <p
-                                                  style="
-                                                    font-size: 14px;
-                                                    line-height: 140%;
-                                                    text-align: center;
-                                                  "
-                                                >
-                                                  <span
-                                                    style="
-                                                      font-family: Cabin, sans-serif;
-                                                      font-size: 12px;
-                                                      line-height: 19.6px;
-                                                    "
-                                                    ><span
-                                                      style="
-                                                        font-size: 22px;
-                                                        line-height: 60.8px;
-                                                        color: #000000;
-                                                      "
-                                                    >
-                                                    </span
-                                                  ></span>
-                                                </p>
-                                                <p
-                                                  style="
-                                                    font-size: 14px;
-                                                    line-height: 140%;
-                                                    text-align: center;
-                                                  "
-                                                >
-                                                  
-                                                </p>
-                                              </div>
-                                            </td>
-                                          </tr>
-                                        </table>
+                                          </a>
+                                          <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
+                                        </div>
                                       </td>
                                     </tr>
                                   </tbody>
                                 </table>
-      
+                               
                                 <!--[if (!mso)&(!IE)]><!-->
                               </div>
                               <!--<![endif]-->
@@ -779,7 +689,6 @@ export class bellAlertTemplate {
                         </div>
                       </div>
                     </div>
-      
                   </div>
       
                   <div class="u-row-container" style="padding: 0px">
@@ -1097,14 +1006,14 @@ export class bellAlertTemplate {
                                                 >
                                                   <a
                                                     href="https://www.linkedin.com/company/jobsmideast/"
-                                                    title="LinkIn"
+                                                    title="LinkedIn"
                                                     target="_blank"
                                                   >
                                                     <!-- upload linkedin -->
                                                     <img
                                                       src="https://jobsmideat-prod.s3.amazonaws.com/cbf2a888-8f50-4bfc-b6f5-2cbad5b11ae1-image-2.png"
-                                                      alt="LinkIn"
-                                                      title="LinkIn"
+                                                      alt="LinkedIn"
+                                                      title="LinkedIn"
                                                       width="32"
                                                       style="
                                                         outline: none;
@@ -1193,6 +1102,7 @@ export class bellAlertTemplate {
                                               </tr>
                                             </tbody>
                                           </table>
+      
                                         </div>
                                       </div>
                                     </td>
@@ -1219,7 +1129,8 @@ export class bellAlertTemplate {
           <!--[if mso]></div><![endif]-->
           <!--[if IE]></div><![endif]-->
         </body>
-      </html>                
+      </html>
+      
 `
     }
 }

@@ -9,9 +9,9 @@ export class MailService {
   constructor(private readonly mailerService: MailerService) {}
   async BellAlertEmail(bellAlertDto:BellAlertDto) {
     try {
-      const title = "test"
-      const message = "test email"
-      const link = bellAlertDto.originLink
+      const companyName = bellAlertDto.companyName
+      const urlLink = bellAlertDto.originLink
+      const jobTitle = bellAlertDto.jobTitle
       const from = `Jobsmideast.com <submissions@jobsmideast.com>`;
       await this.mailerService
         .sendMail({
@@ -19,7 +19,7 @@ export class MailService {
           from: from, // Senders email address
           subject: 'Have you seen this?',
           text: '', // plaintext body
-          html: bellAlertTemplate.send(title,message,link), // HTML body content
+          html: bellAlertTemplate.send(companyName,jobTitle,urlLink), // HTML body content
         })
         .then((success) => {
           console.log(success);
