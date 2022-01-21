@@ -1,6 +1,7 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import * as dotenv from 'dotenv';
 import { BellAlert } from 'src/bell-alert/entities/bell-alert.entity';
+dotenv.config();
 
 
 
@@ -29,5 +30,5 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   ],
   // migrations: ['migration/*.js'],
   // migrationsRun: true,
-  synchronize: true,
+  synchronize: false,
 };

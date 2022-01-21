@@ -7,7 +7,7 @@ export class AppController {
   private logger = new Logger('AppController')
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get('/health-check')
   getHello(): string {
     return this.appService.getHello();
   }
