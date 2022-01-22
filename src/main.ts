@@ -15,15 +15,15 @@ const micoserviceOptions = {
 };
 async function bootstrap() {
   console.log(micoserviceOptions)
-  // const app = await NestFactory.createMicroservice(
-  //   AppModule,
-  //   micoserviceOptions,
-  // );
-  const app = await NestFactory.create(AppModule, { cors: true });
+  const app = await NestFactory.createMicroservice(
+    AppModule,
+    micoserviceOptions,
+  );
+  // const app = await NestFactory.create(AppModule, { cors: true });
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalFilters(new AllExceptionsFilter());
-  // app.listen();
-  const port = process.env.PORT || 3000;
-  await app.listen(port);
+  app.listen();
+  // const port = process.env.PORT || 3000;
+  // await app.listen(port);
 }
 bootstrap();
